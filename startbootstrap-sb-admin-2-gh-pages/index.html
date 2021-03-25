@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Übersicht</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+   
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <!-- <div class="sidebar-brand-icon rotate-n-15"> -->
+                    <i class="fab fa-twitter-square fa-2x"></i>
+                <!-- </div> -->
+                <div class="sidebar-brand-text mx-3">Twitter-App</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Sentiment-Radar</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Login-Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <!-- Added padding to top to see page heading better -->
+                <div class="container-fluid" style="padding-top:25px;">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800";>Twitter-Sentiment-Radar</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                    
+                        <!-- Top Hashtag Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Top Hashtag</div>
+                                            <!-- Use specific id 'topHashtag' to get top hashtag from REST-API with javascript ajax -->
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="topHashtag"></div>
+                                        </div>
+                                        <!-- Create column between icon and data text  -->
+                                        <div class="col-auto">
+                                            <!-- Gray hashtag icon for card -->
+                                            <i class="fas fa-hashtag fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- User With Most Tweets Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">User with most tweets</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="userWithMostTweets"></div>
+                                        </div>
+                                        <!-- Create column between icon and data text  -->
+                                        <div class="col-auto">
+                                            <!-- Gray  icon for card -->
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Average Tweet Length Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Average Tweet Length</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="averageTweetLength"></div>
+                                        </div>
+                                        <!-- Create column between icon and data text  -->
+                                        <div class="col-auto">
+                                            <!-- Divide icon for card -->
+                                            <i class="fas fa-divide fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Number of Tweets in Database Card -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Number of Tweets in Database</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="numberOfTweetsInDatabase">18</div>
+                                        </div>
+                                        <!-- Create column between icon and data text  -->
+                                        <div class="col-auto">
+                                            <!-- Twitter icon for card  -->
+                                            <i class="fab fa-twitter fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- First Area Chart -->
+                        <div class="col-xl-12 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Hashtag Distribution</h6>
+                                    <!-- Filter box text should allign on left hand side -->
+                                    <div style="float:right;">
+                                        <!-- Filter box with hashtag limit for header of Hashtag Distribution Area Chart Card -->
+                                        Count: <input type="number" id="hashtagLimit" style="background-color: white;" min="10" max="100"
+                                            value="20">
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <!-- Canvas to 'draw' Chart -->
+                                        <canvas id="hashtagAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of First Area Chart -->
+
+                        <!-- Token Horizontal Bar Chart -->
+                        <!-- Bootstrap grid -->
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Token Distribution</h6>
+                                    <!-- Filter box text should allign on left hand side -->
+                                    <div style="float:right;">
+                                        <!-- Filter box with hashtag limit for header of Token Distribution Area Chart Card -->
+                                        Count: <input type="number" id="tokenLimit" style="background-color: white;" min="1" max="15000"
+                                            value="3000">
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <!-- Canvas to 'draw' Chart -->
+                                        <canvas id="tokenHorizontalBarChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Bar Chart -->
+
+                        <!-- User Bar Chart -->
+                         <!-- Bootstrap grid -->
+                         <div class="col-xl-6 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">User distribution</h6>
+                                    <div style="float:right;">
+                                        <!-- Filter box with hashtag limit for header of Token Distribution Area Chart Card -->
+                                        Count: <input type="number" id="userLimit" style="background-color: white;" min="1" max="100" value="10">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="userBarChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Bar Chart -->
+
+                        <!-- Sentiment Bubble Chart -->
+                        <!-- Bootstrap grid -->
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Sentiment Distribution</h6>
+                                    <!-- Filter box text should allign on left hand side -->
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <!-- Canvas to 'draw' Chart -->
+                                        <canvas height=120% id="sentimentBubbleChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Bar Chart -->
+
+                        <!-- Test Chart -->
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Named Entities Distribution</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas height="125%" id="namedentities"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Sebastian Rohe 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order of scripts is important -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages -->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="plugins/chartjs-plugin-doughnutlabel.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/color-gradient-function.js"></script>
+    <script src="js/general-function.js"></script>
+    <script src="js/global-constants.js"></script>
+    
+    <!-- Visualization scripts -->
+    <script src="js/visualization/hashtag-area-chart.js"></script>
+    <script src="js/visualization/statistical-data-for-cards.js"></script>
+    <script src="js/visualization/token-vertical-bar-chart.js"></script>
+    <script src="js/visualization/sentiment-bubble-chart.js"></script>
+    <script src="js/visualization/user-bar-chart.js"></script>
+    <script src="js/visualization/named-entities-doughnut-chart.js"></script>
+
+</body>
+
+</html>
