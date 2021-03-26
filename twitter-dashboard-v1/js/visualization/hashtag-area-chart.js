@@ -2,8 +2,8 @@
 var hashtags = document.getElementById("hashtagAreaChart").getContext("2d");
 
 // Colors for for Line chart.
-const hashtagChartColors = ["blue", "orange", "green", "red"];
-const hashtagChartColorsLessOpacity = ["blue", "orange", "green", "red"]
+const hashtagChartColors = ["blue", "green", "orange", "red"];
+const hashtagChartColorsLessOpacity = ["rgba(78, 115, 223, 0.1)", "rgba(28, 200, 138, 0.1)", "rgba(253, 126, 20, 0.1)", "rgba(231, 74, 59, 0.1)"]
 
 // Create color gradient backgrounds with gradient function from "js/color-gradient-function.js" custom script.
 var gradientBackgroundOne = createColorGradient(hashtags, hashtagChartColors);
