@@ -1,5 +1,3 @@
-//###
-
 // Select HTML-Element for hashtag visualization.
 var hashtags = document.getElementById("hashtagAreaChart").getContext("2d");
 

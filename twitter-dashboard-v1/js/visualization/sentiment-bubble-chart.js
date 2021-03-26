@@ -108,9 +108,11 @@ $.ajax({
                 datasets: [
                     {
                         data: dataNegative
-                    }, {
+                    },
+                    {
                         data: dataNeutral
-                    }, {
+                    },
+                    {
                         data: dataPositive
                     }
                 ]
