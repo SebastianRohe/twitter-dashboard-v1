@@ -33,19 +33,20 @@ function createDoughnutChart(referencedElement) {
             plugins: {
                 doughnutlabel: {
                     labels: [{
-                        text: "21246",
+                        text: [],
                         // Settings only for font. Color not included here.
                         font: {
                             size: 20,
-                            //weight: 'bold',
+                            // weight: 'bold',
                             fontFamily: "Helvetica, Arial, sans-serif",
                             horizontalCenter: "middle",
                             verticalCenter: "middle"
                         },
-                        //color: '#224abe',
-                    }, {
-                        text: "Total",
-                        //color: '#224abe',
+                        // color: '#224abe',
+                    },
+                    {
+                        text: [],
+                        // color: '#224abe',
                     }]
                 }
             },
@@ -132,10 +133,17 @@ function getNamedEntities() {
                 count++;
             });
 
-            // update chart
+            var personsValue = values[0];
+            var organizationsValue = values[1];
+            var locationsValue = values[2];
+            var sumOfAllEntities = personsValue + organizationsValue + locationsValue;
+
+            // Update Chart with relevant values.
             namedEntitiesChart.data.datasets[0].data = values;
             namedEntitiesChart.data.datasets[0].backgroundColor = colors;
             namedEntitiesChart.data.labels = labels;
+            namedEntitiesChart.options.plugins.doughnutlabel.labels[0].text = sumOfAllEntities; 
+            namedEntitiesChart.options.plugins.doughnutlabel.labels[1].text = "Total";
             namedEntitiesChart.update();
         }
     });
