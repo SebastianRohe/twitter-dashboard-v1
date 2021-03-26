@@ -8,7 +8,7 @@
  */
 function calculateAverageTweetLength(sumOfTweetLengths, numberOfTweets) {
     // Divide the sum of all tweet lenghts by the number of all tweets and round the result.
-    return (sumOfTweetLengths/numberOfTweets).toFixed(2);
+    return (sumOfTweetLengths / numberOfTweets).toFixed(2);
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ $.ajax({
 
         // Reference to html id to represent data in Cards.
         $("#userWithMostTweets").html(userWithMostTweets + " " + "(" + numberOfTweetsFromUser + ")");
-       
+
     },
     failure: function () {
         alert("Fetching for statistical data failed. Connection error");

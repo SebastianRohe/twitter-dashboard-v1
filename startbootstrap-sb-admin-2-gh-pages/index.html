@@ -3,19 +3,19 @@
 
 <head>
 
+    <!-- Meta 'Section' -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Page title -->
     <title>Übersicht</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -32,9 +32,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <!-- <div class="sidebar-brand-icon rotate-n-15"> -->
+                <!-- Twitter icon side brand -->
+                <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fab fa-twitter-square fa-2x"></i>
-                <!-- </div> -->
+                </div>
                 <div class="sidebar-brand-text mx-3">Twitter-App</div>
             </a>
 
@@ -51,7 +52,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Pages Collapse Menu - Login Pages -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -68,11 +69,11 @@
                     </div>
                 </div>
             </li>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- Sidebar Toggler -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
@@ -95,7 +96,7 @@
                         <h1 class="h3 mb-0 text-gray-800";>Twitter-Sentiment-Radar</h1>
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- First Content Row -->
                     <div class="row">
                     
                         <!-- Top Hashtag Card -->
@@ -105,10 +106,10 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Top Hashtag</div>
-                                            <!-- Use specific id 'topHashtag' to get top hashtag from REST-API with javascript ajax -->
+                                            <!-- Use specific id 'topHashtag' to get top hashtag from REST-API with JavaScript -->
                                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="topHashtag"></div>
                                         </div>
-                                        <!-- Create column between icon and data text  -->
+                                        <!-- Create column between icon and data text -->
                                         <div class="col-auto">
                                             <!-- Gray hashtag icon for card -->
                                             <i class="fas fa-hashtag fa-2x text-gray-300"></i>
@@ -117,6 +118,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- End of Top Hashtag Card -->
                     
                         <!-- User With Most Tweets Card -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -127,7 +129,7 @@
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">User with most tweets</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="userWithMostTweets"></div>
                                         </div>
-                                        <!-- Create column between icon and data text  -->
+                                        <!-- Create column between icon and data text -->
                                         <div class="col-auto">
                                             <!-- Gray  icon for card -->
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -136,6 +138,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- End User With Most Tweets Card -->
                     
                         <!-- Average Tweet Length Card -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -146,7 +149,7 @@
                                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Average Tweet Length</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="averageTweetLength"></div>
                                         </div>
-                                        <!-- Create column between icon and data text  -->
+                                        <!-- Create column between icon and data text -->
                                         <div class="col-auto">
                                             <!-- Divide icon for card -->
                                             <i class="fas fa-divide fa-2x text-gray-300"></i>
@@ -155,6 +158,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- End Average Tweet Length Card -->
                     
                         <!-- Number of Tweets in Database Card -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -166,31 +170,32 @@
                                                 Number of Tweets in Database</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="numberOfTweetsInDatabase">18</div>
                                         </div>
-                                        <!-- Create column between icon and data text  -->
+                                        <!-- Create column between icon and data text -->
                                         <div class="col-auto">
-                                            <!-- Twitter icon for card  -->
+                                            <!-- Twitter icon for card -->
                                             <i class="fab fa-twitter fa-3x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- End of Number of Tweets in Database Card -->
 
                     </div>
+                    <!-- End of First Content Row -->
 
-                    <!-- Content Row -->
+                    <!-- Second Content Row -->
                     <div class="row">
 
-                        <!-- First Area Chart -->
+                        <!-- Hashtag Line Chart -->
                         <div class="col-xl-12 col-lg-5">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Hashtag Distribution</h6>
                                     <!-- Filter box text should allign on left hand side -->
                                     <div style="float:right;">
-                                        <!-- Filter box with hashtag limit for header of Hashtag Distribution Area Chart Card -->
-                                        Count: <input type="number" id="hashtagLimit" style="background-color: white;" min="10" max="100"
-                                            value="20">
+                                        <!-- Filter box with hashtag limit for header of Hashtag Distribution Line Chart Card -->
+                                        Count: <input type="number" id="hashtagLimit" style="background-color: white;" min="10" max="100" value="20">
                                     </div>
                                 </div>
                                 <!-- Card Body -->
@@ -205,16 +210,14 @@
                         <!-- End of First Area Chart -->
 
                         <!-- Token Horizontal Bar Chart -->
-                        <!-- Bootstrap grid -->
-                        <div class="col-xl-6 col-lg-12">
+                        <div class="col-xl-6 col-lg-12"> 
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Token Distribution</h6>
                                     <!-- Filter box text should allign on left hand side -->
                                     <div style="float:right;">
                                         <!-- Filter box with hashtag limit for header of Token Distribution Area Chart Card -->
-                                        Count: <input type="number" id="tokenLimit" style="background-color: white;" min="1" max="15000"
-                                            value="3000">
+                                        Count: <input type="number" id="tokenLimit" style="background-color: white;" min="1" max="15000" value="3000">
                                     </div>
                                 </div>
                                 <!-- Card Body -->
@@ -229,8 +232,7 @@
                         <!-- End of Bar Chart -->
 
                         <!-- User Bar Chart -->
-                         <!-- Bootstrap grid -->
-                         <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">User distribution</h6>
@@ -241,20 +243,19 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
+                                        <!-- Canvas to 'draw' Chart -->
                                         <canvas id="userBarChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End of Bar Chart -->
+                        <!-- End of User Bar Chart -->
 
                         <!-- Sentiment Bubble Chart -->
-                        <!-- Bootstrap grid -->
                         <div class="col-xl-6 col-lg-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Sentiment Distribution</h6>
-                                    <!-- Filter box text should allign on left hand side -->
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
@@ -267,7 +268,7 @@
                         </div>
                         <!-- End of Bar Chart -->
 
-                        <!-- Test Chart -->
+                        <!-- Named Entities Pie Chart -->
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -275,11 +276,17 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
+                                         <!-- Canvas to 'draw' Chart -->
                                         <canvas height="125%" id="namedentities"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- End of Named Entities Pie Chart -->
+
+                    </div>
+                    <!-- End of Second Content Row -->
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -289,6 +296,7 @@
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
+                    <!-- Copyright Section -->
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Sebastian Rohe 2021</span>
                     </div>
@@ -302,12 +310,12 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
+    <!-- Scroll to Top Button -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Logout Modal -->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -326,8 +334,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Order of scripts is important -->
+    <!-- End of Logout Modal -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
